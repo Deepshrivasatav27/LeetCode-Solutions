@@ -1,0 +1,21 @@
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+
+# Complexity
+- Time complexity:
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+… 
+class Solution(object):
+    def repeatedNTimes(self, nums):
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return num
+            seen.add(num)
+ob = Solution()
+print(ob.repeatedNTimes([5,1,5,2,5,3,5,4]))
+
+```
