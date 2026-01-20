@@ -1,0 +1,22 @@
+class Solution(object):
+    def minBitwiseArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        ans = []
+        
+        for n in nums:
+            found = False
+            # We iterate from 0 to n because ans[i] OR (ans[i] + 1) 
+            # will always be >= ans[i].
+            for x in range(n):
+                if (x | (x + 1)) == n:
+                    ans.append(x)
+                    found = True
+                    break
+            
+            if not found:
+                ans.append(-1)
+                
+        return ans
